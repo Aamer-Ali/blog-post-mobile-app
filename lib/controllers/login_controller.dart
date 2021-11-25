@@ -46,13 +46,13 @@ class LoginController extends GetxController {
         isLoginUserLoading.value = false;
         if (response != null) {
           try {
-            UserModel user = await UserHelper.createUser(UserModel(
-                id: response.id!,
-                name: response.name!,
-                firstName: response.firstName!,
-                lastName: response.lastName!,
-                email: response.email!,
-                profilePic: response.profilePic));
+            // UserModel user = await UserHelper.createUser(UserModel(
+            //     id: response.id!,
+            //     name: response.name!,
+            //     firstName: response.firstName!,
+            //     lastName: response.lastName!,
+            //     email: response.email!,
+            //     profilePic: response.profilePic));
             final box = GetStorage(Constants().MY_GET_STOREAGE_CONTAINER);
             box.write(Constants().IS_USER_LOGIN_KEY, true);
             Navigator.pushReplacementNamed(context, "/home");
